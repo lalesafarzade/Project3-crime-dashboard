@@ -17,13 +17,14 @@
     
   }
 
+  
   #panel-figs1 {
     background-color: #3b524700;
     height: 90%;
     width:80%; 
     margin-left: 1.5rem; 
     border-radius:10px;
-    box-shadow: 0 10px 16px -8px rgb(5, 5, 5);
+    box-shadow: 5px 10px 8px 10px #888888;
   }
   
   #panel-figs2 {
@@ -32,7 +33,7 @@
     width:80%; 
     margin-left: 1.5rem;
     border-radius:10px;
-    box-shadow: 0 10px 16px -8px rgb(5, 5, 5);
+    box-shadow: 5px 10px 8px 10px #888888;
   }
   
   #panel-figs3 {
@@ -41,7 +42,7 @@
     width:80%; 
     margin-left: 1.5rem;
     border-radius:10px;
-    box-shadow: 0 10px 16px -8px rgb(5, 5, 5);
+    box-shadow: 5px 10px 8px 10px #888888;
   }
   
   #panel-figs4 {
@@ -50,7 +51,7 @@
     width:80%; 
     margin-left: 1.5rem;
     border-radius:10px;
-    box-shadow: 0 10px 16px -8px rgb(5, 5, 5);
+    box-shadow: 5px 10px 8px 10px #888888;
     
   }
 
