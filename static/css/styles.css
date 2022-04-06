@@ -1,0 +1,85 @@
+/*body:hover{
+    background-image:url(/static/images/crimme.png) ;
+    background-size: cover;
+}
+*/
+
+#navbarToggleExternalContent{
+    color:aquamarine
+}
+.box-comp {
+    border-radius: 1rem;
+    margin-top: 5rem; 
+    margin-bottom: 2rem; 
+    padding: 10px 20px ; 
+    color:black;
+    background-color: #e7ebee00;
+    
+  }
+
+  
+  #panel-figs1 {
+    background-color: #3b524700;
+    height: 90%;
+    width:80%; 
+    margin-left: 1.5rem; 
+    border-radius:10px;
+    box-shadow: 5px 10px 8px 10px #888888;
+  }
+  
+  #panel-figs2 {
+    background-color: #1b3fa300;
+    height: 90%;
+    width:80%; 
+    margin-left: 1.5rem;
+    border-radius:10px;
+    box-shadow: 5px 10px 8px 10px #888888;
+  }
+  
+  #panel-figs3 {
+    background-color: #4d3b5200;
+    height: 90%;
+    width:80%; 
+    margin-left: 1.5rem;
+    border-radius:10px;
+    box-shadow: 5px 10px 8px 10px #888888;
+  }
+  
+  #panel-figs4 {
+    background-color: #9aa31b00;
+    height: 90%;
+    width:80%; 
+    margin-left: 1.5rem;
+    border-radius:10px;
+    box-shadow: 5px 10px 8px 10px #888888;
+    
+  }
+
+  /* footer */
+
+#footer{
+    margin-top: 2.5rem 1rem;
+    text-align: center;
+    color: #898c8e;
+  }
+  .social-icon {
+    color: #898c8e;
+    border-color: black;
+    margin:0 .5rem; 
+  }
+  
+  .social-icon:hover,#footer:hover,#nav-brand:hover,#nav-text:hover,.t-Data:hover {
+    color: #FDCEB9;
+  }
+  
+
+  
+  #f_cap{
+    font-family: "Ubuntu"; 
+    color:#898c8e ;
+    font-size: .85rem;
+  }
+  
+
+
+
