@@ -11,8 +11,11 @@ conn = 'mongodb://localhost:27017'
 
 # Pass connection to the pymongo instance.
 client = pymongo.MongoClient(conn)
-db = client.test
-listings = db.npu.find()
+db = client.crime_db
+npu_listings = db.npu.find()
+cat_listings=db.cat.find()
+data_listings=db.crime_info.find()
+
 #for listing in listings:
     
     #del listing['_id']
@@ -23,10 +26,42 @@ listings = db.npu.find()
 def home():
      return render_template("index.html")
 
+@app.route("/choropleth")
+def mapping():
+     return render_template("choropleth.html")
+
+@app.route("/leafletmap")
+def mapping():
+     return render_template("map.html")
+
+@app.route("/dashboard")
+def mapping():
+     return render_template("dashboard.html")
+
+
+
+
+
 @app.route("/MapAPI")
 def data_map():
     res=[]
-    for listing in listings:
+    for listing in npu_listings:
+        del listing['_id']
+        res.append(listing)
+    return jsonify(res)
+
+@app.route("/catAPI")
+def data_cat():
+    res=[]
+    for listing in cat_listings:
+        del listing['_id']
+        res.append(listing)
+    return jsonify(res)
+
+@app.route("/data")
+def data_total():
+    res=[]
+    for listing in data_listings:
         del listing['_id']
         res.append(listing)
     return jsonify(res)
