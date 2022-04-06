@@ -1,0 +1,121 @@
+* {
+    font-family: sans-serif;
+  }
+  #wrapper {
+    height: 500px;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    overflow:visible;
+  }
+  #container {
+    float: left;
+    height: 500px; 
+    width: 700px; 
+    margin: 0;
+  }
+  #info {
+    float: left;
+    width: 270px;
+    padding-left: 20px;
+    margin: 100px 0 0 0;
+    border-left: 1px solid silver;
+  }
+  #info h2 {
+    display: inline;
+    font-size: 13pt;
+  }
+  #info .f32 .flag {
+    vertical-align: bottom !important;
+  }
+  
+  #info h4 {
+    margin: 1em 0 0 0;
+  }
+  
+  @media screen and (max-width: 920px) {
+    #wrapper, #container,  #info {
+      float: none;
+      width: 100%;
+      height: auto;
+      margin: 0.5em 0;
+      padding: 0;
+      border: none;
+    }
+  }
+
+  .box-comp {
+    border-radius: 1rem;
+    margin-top: 5rem; 
+    margin-bottom: 2rem; 
+    padding: 10px 20px ; 
+    color:black;
+    background-color: #e7ebee00;
+    
+  }
+
+  
+
+  #atlanta{
+    background-color: #3b524700;
+    height: 100%;
+    width:100%; 
+    
+    border-radius:10px;
+    box-shadow: 5px 10px 8px 10px #888888;
+  }
+
+
+  #panel-figs1 {
+    background-color: #3b524700;
+    height: 100%;
+    width:100%; 
+     
+    border-radius:10px;
+    box-shadow: 5px 10px 8px 10px #888888;
+  }
+  
+  #panel-figs2 {
+    background-color: #1b3fa300;
+    height: 100%;
+    width:80%; 
+    
+    border-radius:10px;
+    box-shadow: 0 10px 16px -8px rgb(5, 5, 5);
+  }
+  
+  #panel-figs3 {
+    background-color: #4d3b5200;
+    height: 90%;
+    width:80%; 
+    
+    border-radius:10px;
+    box-shadow: 0 10px 16px -8px rgb(5, 5, 5);
+  }
+  
+  #panel-figs4 {
+    background-color: #9aa31b00;
+    height: 90%;
+    width:80%; 
+    
+    border-radius:10px;
+    box-shadow: 0 10px 16px -8px rgb(5, 5, 5);
+    
+  }
+
+  /* footer */
+
+#footer{
+    margin-top: 2.5rem 1rem;
+    text-align: center;
+    color: #898c8e;
+  }
+  .social-icon {
+    color: #898c8e;
+    border-color: black;
+    margin:0 .5rem; 
+  }
+  
+  .social-icon:hover,#footer:hover,#nav-brand:hover,#nav-text:hover,.t-Data:hover {
+    color: #FDCEB9;
+  }
