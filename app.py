@@ -22,19 +22,19 @@ data_listings=db.crime_info.find()
     #print(listing)
 
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def home():
      return render_template("index.html")
 
-@app.route("/choropleth")
+@app.route("/mapping", methods=["GET"])
 def mapping():
      return render_template("choropleth.html")
 
-@app.route("/leafletmap")
+@app.route("/leaflet", methods=["GET"])
 def leaflet():
      return render_template("map.html")
 
-@app.route("/dashboard")
+@app.route("/dash", methods=["GET"])
 def dash():
      return render_template("dashboard.html")
 
@@ -42,24 +42,24 @@ def dash():
 
 
 
-@app.route("/MapAPI")
-def data_map():
+@app.route("/MapAPI", methods=["GET"])
+def MapAPI():
     res=[]
     for listing in npu_listings:
         del listing['_id']
         res.append(listing)
     return jsonify(res)
 
-@app.route("/catAPI")
-def data_cat():
+@app.route("/catAPI", methods=["GET"])
+def catAPI():
     res=[]
     for listing in cat_listings:
         del listing['_id']
         res.append(listing)
     return jsonify(res)
 
-@app.route("/data")
-def data_total():
+@app.route("/data", methods=["GET"])
+def data():
     res=[]
     for listing in data_listings:
         del listing['_id']
