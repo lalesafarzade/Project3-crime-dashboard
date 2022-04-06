@@ -31,11 +31,11 @@ def mapping():
      return render_template("choropleth.html")
 
 @app.route("/leafletmap")
-def mapping():
+def leaflet():
      return render_template("map.html")
 
 @app.route("/dashboard")
-def mapping():
+def dash():
      return render_template("dashboard.html")
 
 
