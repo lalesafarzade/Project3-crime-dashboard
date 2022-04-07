@@ -24,6 +24,9 @@ data_listings=db.crime_info.find()
 
 @app.route("/", methods=["GET"])
 def home():
+     return render_template("index.html")
+
+@app.route("/mapping", methods=["GET"])
 def mapping():
      return render_template("choropleth.html")
 
