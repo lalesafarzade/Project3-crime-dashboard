@@ -117,7 +117,7 @@ d3.json("../ResourcesDNU/crime_info.json")
         //add Crime data to layer group
         L.geoJson(crimeData, {
             pointToLayer: function(feature, latLong){
-                for (let i = 0; i < cars.length; i++) {
+                for (let i = 0; i < feature.length; i++) {
                     let latLong = Array.from(feature.crimeinfo.lat[i],feature.crimeinfo.long[i] )
                 return L.circleMarker(latLong);}
             },
