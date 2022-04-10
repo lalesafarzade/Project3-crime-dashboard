@@ -14,7 +14,7 @@ client = pymongo.MongoClient(conn)
 db = client.crime_db
 npu_listings = db.npu.find()
 cat_listings=db.cat.find()
-data_listings=db.crime_info.find()
+data_listings=list(db.crime_info.find())
 
 #for listing in listings:
     
@@ -30,9 +30,24 @@ def atl():
 def mapping():
      return render_template("choropleth.html")
 
-@app.route("/leaflet", methods=["GET"])
-def leaflet():
-     return render_template("map.html")
+@app.route("/data", methods=["GET"])
+def data():
+    res=[]
+    for listing in data_listings:
+        # del listing['_id']
+        res.append({'index': listing["index"],
+        'offense_id' : listing["offense_id"],
+        'rpt_date' : listing["rpt_date"],
+        'beat' : listing["beat"],
+        'location' : listing["location"],
+        'UC2_Literal' : listing["UC2_Literal"],
+        'neighborhood' : listing["neighborhood"],
+        'npu' : listing["npu"],
+        'lat' : listing["lat"],
+        'long' : listing["long"],
+        'occur_year' : listing["occur_year"],
+        'occur_month' : listing["occur_month"]})
+    return jsonify(res=res)
 
 @app.route("/dash", methods=["GET"])
 def dash():
