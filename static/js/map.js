@@ -72,8 +72,8 @@ let legend = L.control({
 // };
 
 //call Crime Data JSON
-d3.json("../Resources/crime_info.json")
-    .then(function(crimeData){
+// d3.json("../Resources/crime_info.json")
+//     .then(function(crimeData){
         //plot circles such that the radius depends on the earthquake magnitude, color depends on depth
         //create function that chooses color based on depth
         // function dataColor(depth){
@@ -96,18 +96,18 @@ d3.json("../ResourcesDNU/crime_info.json")
         //plot circles such that the radius depends on the earthquake magnitude, color depends on depth
         //create function that chooses color based on depth
         //create function that determines radius size
-        function radiusSize(mag){
-            if (mag==0)
-                return 1;
-            else
-                return mag*4;
-        }
+        // function radiusSize(mag){
+        //     if (mag==0)
+        //         return 1;
+        //     else
+        //         return mag*4;
+        // }
         // create function to add style
         function dataStyle(feature){
             return {
                 opacity: 0.5,
                 fillOpacity: 0.5,
-                fillColor: dataColor(feature.geometry.coordinates[2]), //index 2 is depth, 0 and 1 are lat and long
+                fillColor: "blue", //index 2 is depth, 0 and 1 are lat and long
                 color: "000000",
                 radius: 1, 
                 weight: 0.5,
@@ -117,8 +117,9 @@ d3.json("../ResourcesDNU/crime_info.json")
         //add Crime data to layer group
         L.geoJson(crimeData, {
             pointToLayer: function(feature, latLong){
-                let 
-                return L.circleMarker(latLong);
+                for (let i = 0; i < cars.length; i++) {
+                    let latLong = Array.from(feature.crimeinfo.lat[i],feature.crimeinfo.long[i] )
+                return L.circleMarker(latLong);}
             },
             //add style
             style: dataStyle,
