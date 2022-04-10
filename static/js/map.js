@@ -90,6 +90,11 @@ d3.json("../Resources/crime_info.json")
         //     else
         //         return "green";
         // }
+//call GeoJSON api
+d3.json("../ResourcesDNU/crime_info.json")
+    .then(function(crimeData){
+        //plot circles such that the radius depends on the earthquake magnitude, color depends on depth
+        //create function that chooses color based on depth
         //create function that determines radius size
         function radiusSize(mag){
             if (mag==0)
@@ -104,7 +109,7 @@ d3.json("../Resources/crime_info.json")
                 fillOpacity: 0.5,
                 fillColor: dataColor(feature.geometry.coordinates[2]), //index 2 is depth, 0 and 1 are lat and long
                 color: "000000",
-                radius: radiusSize(feature.properties.mag), 
+                radius: 1, 
                 weight: 0.5,
                 stroke: true
             }
@@ -118,28 +123,17 @@ d3.json("../Resources/crime_info.json")
             style: dataStyle,
             // add popups
             onEachFeature: function(feature,layer){
-                layer.bindPopup(`Magnitude: <b>${feature.properties.mag}</b><br>
-                                Depth: <b>${feature.geometry.coordinates[2]}</b><br>
-                                Location: <b>${feature.properties.place}</b><br>`);
+                layer.bindPopup(`Neighborhood: <b>${feature.crime_info.neighborhood}</b><br>
+                                Crime: <b>${feature.crime_info.UC2_Literal}</b><br>
+                                Date: <b>${featurecrime_info.
+                                    rpt_date
+                                    }</b><br>`);
             }
-        }).addTo(earthQuakes);
+        }).addTo(crimeTabs);
 
     })
 
 
-//Call api using D3
-d3.json("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json")
-    .then(function(plotData){
-    L.geoJson(plotData,{
-        // add styling to make lines visible
-        color: "yellow",
-        weight: 1
-    }).addTo(tectPlates)
-    });
-
-// add tectPlates to map
-tectPlates.addTo(worldMap);
-//add earthquake layer to map
-earthQuakes.addTo(worldMap);
+crimeTabs.addTo(worldMap);
 //add legend to the map
 legend.addTo(worldMap);
