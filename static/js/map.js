@@ -53,23 +53,23 @@ let legend = L.control({
     position: "bottomright"
 });
 
-legend.onAdd = function(){
-    // add div for legend to appear
-    let div = L.DomUtil.create("div", "info legend");
-    let intervals = [-10,10,30,50,70,90];
-    let colors = ["green","#cafc03","#fcad03","#fc8403","red"];
-    //loop through intervales and generate label for each
-    for(var i = 0; i < intervals.length; i++)
-    {
-        // inner html that sets the square for the label
-        div.innerHTML += "<i style='background:"
-        +colors[i]
-        +"`></i>"
-        +intervals[i]
-        +(intervals[i+1] ? "km &ndash km;" + intervals[i+1] + "km<br>" : "+");
-    }
-    return div;
-};
+// legend.onAdd = function(){
+//     // add div for legend to appear
+//     let div = L.DomUtil.create("div", "info legend");
+//     let intervals = [-10,10,30,50,70,90];
+//     let colors = ["green","#cafc03","#fcad03","#fc8403","red"];
+//     //loop through intervales and generate label for each
+//     for(var i = 0; i < intervals.length; i++)
+//     {
+//         // inner html that sets the square for the label
+//         div.innerHTML += "<i style='background:"
+//         +colors[i]
+//         +"`></i>"
+//         +intervals[i]
+//         +(intervals[i+1] ? "km &ndash km;" + intervals[i+1] + "km<br>" : "+");
+//     }
+//     return div;
+// };
 
 //call Crime Data JSON
 d3.json("../Resources/crime_info.json")
@@ -136,4 +136,4 @@ d3.json("../ResourcesDNU/crime_info.json")
 
 crimeTabs.addTo(worldMap);
 //add legend to the map
-legend.addTo(worldMap);
+// legend.addTo(worldMap);
