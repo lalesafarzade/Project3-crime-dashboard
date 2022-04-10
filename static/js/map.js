@@ -27,14 +27,14 @@ let basemaps= {
 }
 
 //generate map object
-var worldMap = L.map("map", {
+var atlMap = L.map("map", {
     center: [33.7490, 84.3880],
     zoom: 12,
     layers: [defaultView,greyscaleView, topoView]
 })
 
 // add map object to maps
-defaultView.addTo(worldMap);
+defaultView.addTo(atlMap);
 
 //generate layer for crime data
 let crimeTabs = new L.layerGroup();
@@ -47,7 +47,7 @@ let overlays = {
 //add a layer control
 L.control
     .layers(basemaps, overlays)
-    .addTo(worldMap);
+    .addTo(atlMap);
 //add another layer control for the legend
 let legend = L.control({
     position: "bottomright"
@@ -117,6 +117,7 @@ d3.json("../ResourcesDNU/crime_info.json")
         //add Crime data to layer group
         L.geoJson(crimeData, {
             pointToLayer: function(feature, latLong){
+                let 
                 return L.circleMarker(latLong);
             },
             //add style
@@ -134,6 +135,6 @@ d3.json("../ResourcesDNU/crime_info.json")
     })
 
 
-crimeTabs.addTo(worldMap);
+crimeTabs.addTo(atlMap);
 //add legend to the map
-// legend.addTo(worldMap);
+// legend.addTo(atlMap);
