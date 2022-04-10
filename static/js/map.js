@@ -119,7 +119,8 @@ d3.json("../ResourcesDNU/crime_info.json")
             pointToLayer: function(feature, latLong){
                 for (let i = 0; i < feature.length; i++) {
                     let latLong = Array.from(feature.crimeinfo.lat[i],feature.crimeinfo.long[i] )
-                return L.circleMarker(latLong);}
+                    return L.circleMarker(latLong);}
+
             },
             //add style
             style: dataStyle,
