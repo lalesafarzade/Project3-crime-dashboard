@@ -27,14 +27,14 @@ let basemaps= {
 }
 
 //generate map object
-var worldMap = L.map("map", {
+var atlMap = L.map("map", {
     center: [33.7490, 84.3880],
     zoom: 12,
     layers: [defaultView,greyscaleView, topoView]
 })
 
 // add map object to maps
-defaultView.addTo(worldMap);
+defaultView.addTo(atlMap);
 
 //generate layer for crime data
 let crimeTabs = new L.layerGroup();
@@ -47,33 +47,33 @@ let overlays = {
 //add a layer control
 L.control
     .layers(basemaps, overlays)
-    .addTo(worldMap);
+    .addTo(atlMap);
 //add another layer control for the legend
 let legend = L.control({
     position: "bottomright"
 });
 
-legend.onAdd = function(){
-    // add div for legend to appear
-    let div = L.DomUtil.create("div", "info legend");
-    let intervals = [-10,10,30,50,70,90];
-    let colors = ["green","#cafc03","#fcad03","#fc8403","red"];
-    //loop through intervales and generate label for each
-    for(var i = 0; i < intervals.length; i++)
-    {
-        // inner html that sets the square for the label
-        div.innerHTML += "<i style='background:"
-        +colors[i]
-        +"`></i>"
-        +intervals[i]
-        +(intervals[i+1] ? "km &ndash km;" + intervals[i+1] + "km<br>" : "+");
-    }
-    return div;
-};
+// legend.onAdd = function(){
+//     // add div for legend to appear
+//     let div = L.DomUtil.create("div", "info legend");
+//     let intervals = [-10,10,30,50,70,90];
+//     let colors = ["green","#cafc03","#fcad03","#fc8403","red"];
+//     //loop through intervales and generate label for each
+//     for(var i = 0; i < intervals.length; i++)
+//     {
+//         // inner html that sets the square for the label
+//         div.innerHTML += "<i style='background:"
+//         +colors[i]
+//         +"`></i>"
+//         +intervals[i]
+//         +(intervals[i+1] ? "km &ndash km;" + intervals[i+1] + "km<br>" : "+");
+//     }
+//     return div;
+// };
 
 //call Crime Data JSON
-d3.json("../Resources/crime_info.json")
-    .then(function(crimeData){
+// d3.json("../Resources/crime_info.json")
+//     .then(function(crimeData){
         //plot circles such that the radius depends on the earthquake magnitude, color depends on depth
         //create function that chooses color based on depth
         // function dataColor(depth){
@@ -90,21 +90,26 @@ d3.json("../Resources/crime_info.json")
         //     else
         //         return "green";
         // }
+//call GeoJSON api
+d3.json("../ResourcesDNU/crime_info.json")
+    .then(function(crimeData){
+        //plot circles such that the radius depends on the earthquake magnitude, color depends on depth
+        //create function that chooses color based on depth
         //create function that determines radius size
-        function radiusSize(mag){
-            if (mag==0)
-                return 1;
-            else
-                return mag*4;
-        }
+        // function radiusSize(mag){
+        //     if (mag==0)
+        //         return 1;
+        //     else
+        //         return mag*4;
+        // }
         // create function to add style
         function dataStyle(feature){
             return {
                 opacity: 0.5,
                 fillOpacity: 0.5,
-                fillColor: dataColor(feature.geometry.coordinates[2]), //index 2 is depth, 0 and 1 are lat and long
+                fillColor: "blue", //index 2 is depth, 0 and 1 are lat and long
                 color: "000000",
-                radius: radiusSize(feature.properties.mag), 
+                radius: 1, 
                 weight: 0.5,
                 stroke: true
             }
@@ -112,34 +117,25 @@ d3.json("../Resources/crime_info.json")
         //add Crime data to layer group
         L.geoJson(crimeData, {
             pointToLayer: function(feature, latLong){
-                return L.circleMarker(latLong);
+                for (let i = 0; i < feature.length; i++) {
+                    let latLong = Array.from(feature.crimeinfo.lat[i],feature.crimeinfo.long[i] )
+                return L.circleMarker(latLong);}
             },
             //add style
             style: dataStyle,
             // add popups
             onEachFeature: function(feature,layer){
-                layer.bindPopup(`Magnitude: <b>${feature.properties.mag}</b><br>
-                                Depth: <b>${feature.geometry.coordinates[2]}</b><br>
-                                Location: <b>${feature.properties.place}</b><br>`);
+                layer.bindPopup(`Neighborhood: <b>${feature.crime_info.neighborhood}</b><br>
+                                Crime: <b>${feature.crime_info.UC2_Literal}</b><br>
+                                Date: <b>${featurecrime_info.
+                                    rpt_date
+                                    }</b><br>`);
             }
-        }).addTo(earthQuakes);
+        }).addTo(crimeTabs);
 
     })
 
 
-//Call api using D3
-d3.json("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json")
-    .then(function(plotData){
-    L.geoJson(plotData,{
-        // add styling to make lines visible
-        color: "yellow",
-        weight: 1
-    }).addTo(tectPlates)
-    });
-
-// add tectPlates to map
-tectPlates.addTo(worldMap);
-//add earthquake layer to map
-earthQuakes.addTo(worldMap);
+crimeTabs.addTo(atlMap);
 //add legend to the map
-legend.addTo(worldMap);
+// legend.addTo(atlMap);
