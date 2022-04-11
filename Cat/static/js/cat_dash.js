@@ -1,6 +1,55 @@
 const url = "/catAPI";
 
-var bluePalette = ["3fc1c0","20bac5","00b2ca","04a6c2","0899ba","0f80aa","16679a","1a5b92","1c558e","1d4e89"];
+var bluePalette = ["#1D4E89","#1C558E","#1A5B92","#16679A","#0F80AA","#0899BA","#04A6C2","#00B2CA","#20BAC5","#3FC1C0","#72efdd","#80ffdb"];
+
+var month = {}
+
+function buildMonthBar() {
+    d3.json(url).then(function (res) {
+        var length = res.res.length
+        for (let i = 0; i < length; i++) {
+            let data_res = res.res[i]
+            // console.log(data_res);
+
+            // Getting only Crime Type Data
+            let crimeMonth = data_res.occur_month
+            // console.log(crimeType)
+
+            // runs if 0
+            if (!month[crimeMonth]) {
+                month[crimeMonth] = 0
+            }
+            month[crimeMonth] += 1
+
+        };
+        // Creating layout adding plot
+        let layout = {
+            title: "Crimes by Month",
+            height: 600,
+            width: 1000
+        };
+
+        Plotly.newPlot('month-bar', [{
+            // x values are the crime types
+            x: Object.keys(month),
+            // y values are the total count values
+            y: Object.values(month),
+            type: 'bar',
+            // orientation: 'h',
+            marker: {
+                color: bluePalette
+            },
+            transforms: [{
+                type: 'sort',
+                target: 'y',
+                order: 'descending'
+            }]    
+        }], layout)
+    });
+
+}
+
+buildMonthBar();
 
 // Empty Object to insert crimes
 var crimes = {}
@@ -13,7 +62,7 @@ function buildBar() {
             // console.log(data_res);
 
             // Getting only Crime Type Data
-            let crimeType = data_res.UC2_Literal
+            let crimeType = data_res.crime_type
             // console.log(crimeType)
 
             // runs if 0
@@ -106,7 +155,7 @@ function buildPie() {
             // console.log(data_res);
 
             // Getting only Crime Type Data
-            let crimeType = data_res.UC2_Literal
+            let crimeType = data_res.crime_type
             // console.log(crimeType)
 
             // runs if 0
