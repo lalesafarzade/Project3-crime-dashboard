@@ -27,15 +27,16 @@
 <body>
     <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-dark p-4">
-                <p class="text-white">NPU Dashbord</p>
-                <p class="text-white">City Dashbord</p>
-                <p class="text-white">Neighborhood Dashbord</p>
-                <p class="text-white">map</p>
+            <div class="bg-info p-4">
+                <a href="/"><p class="text-white">home</p></a>
+                <a href="/dash"><p class="text-white">NPU Dashbord</p></a>
+                <a href="/dashboard"><p class="text-white">City Dashbord</p></a>
+                <a href="/neighborhood"><p class="text-white">Neighborhood Dashbord</p></a>
+                <a href="/leaflet"><p class="text-white">map</p></a>
 
             </div>
         </div>
-        <nav class="navbar navbar-light bg-light" id="navigation">
+        <nav class="navbar navbar-light bg-info" id="navigation">
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +45,7 @@
         </nav>
     </div>
     
-    <div class="container">
+    <div class="container-fluid">
         <div class="row info">
             <div class="col-lg-3 col-sm-12">
                 <div class="row info">
@@ -59,26 +60,22 @@
                 
 
             </div>
-            <div class="col-lg-9 col-sm-12" id="row1"><br><br>
-                <div id="wrapper">
-                    <div id="atlanta"></div>
-                    <div id="info">
-                      <span class="f32"><span id="flag"></span></span>
-                      <h2></h2>
-                      <div class="subheader">Click countries to view history</div>
-                      <div id="country-chart"></div>
-                    </div>
-                  </div>
-                
-
-            </div>
+        
 
         </div>
 
     </div>
     <div class="container-fluid">
         <div class="row info">
-            <div class="col-lg-6 col-md-12" id="row1" >
+            <div class="col-lg-4 col-md-12" id="row1" >
+                <div>
+                    <div id="atlanta"></div>
+
+                </div>
+                
+
+            </div>
+            <div class="col-lg-4 col-md-12" id="row1" >
                 <div class="well">
                     <div id="bubble"></div>
 
@@ -86,7 +83,7 @@
                 
 
             </div>
-            <div class="col-lg-6 col-md-12" id="row1" >
+            <div class="col-lg-4 col-md-12" id="row1" >
                 <div class="well">
                     <div id="pie-ch"></div>
 

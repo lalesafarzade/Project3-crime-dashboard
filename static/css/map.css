@@ -32,6 +32,8 @@
   #info h4 {
     margin: 1em 0 0 0;
   }
+
+ 
   
   @media screen and (max-width: 920px) {
     #wrapper, #container,  #info {
@@ -67,8 +69,16 @@
 
 
   #panel-figs1 {
-    background-color: #3b524700;
-    height: 100%;
+    background-color: #38d98b;
+    height: 70%;
+    width:100%; 
+     
+    border-radius:10px;
+    box-shadow: 5px 10px 8px 10px #888888;
+  }
+  #atlanta{
+    background-color: #38d98b;
+    height: 70%;
     width:100%; 
      
     border-radius:10px;
@@ -76,7 +86,7 @@
   }
   
   #panel-figs2 {
-    background-color: #1b3fa300;
+    background-color: #1145d1fa;
     height: 100%;
     width:80%; 
     
