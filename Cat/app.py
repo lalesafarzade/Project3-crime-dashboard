@@ -11,8 +11,8 @@ conn = 'mongodb://localhost:27017'
 
 # Pass connection to the pymongo instance.
 client = pymongo.MongoClient(conn)
-db = client.crime_db_2
-npu_listings = db.npu.find()
+db = client.crime_db_3
+npu_listings = list(db.npu.find())
 cat_listings=list(db.cat.find())
 data_listings=list(db.crime_info.find())
 
@@ -57,9 +57,9 @@ def catAPI():
     for listing in cat_listings:
         # del listing['_id']
         res.append({ 'npu': listing["npu"], 
-        'UC2_Literal': listing["UC2_Literal"], 
+        'crime_type': listing["crime_type"], 
         'occur_year': listing["occur_year"], 
-        'offense_id': listing["offense_id"]})
+        'occur_month': listing["occur_month"]})
     return jsonify(res=res)
 
 @app.route("/data", methods=["GET"])
