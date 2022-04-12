@@ -4,13 +4,15 @@ import pymongo
 from config import myconnection
 
 app = Flask(__name__)
-
+#local:
 #conn = 'mongodb://localhost:27017'
-conn=myconnection
+#db = client.crime_db_3
 
-# Pass connection to the pymongo instance.
-client = pymongo.MongoClient(conn)
-db = client.crime_db_3
+#cloud
+db=myconnection
+client = pymongo.MongoClient(db)
+
+
 npu_listings = list(db.npu.find())
 cat_listings=list(db.cat.find())
 data_listings=list(db.crime_info.find())
