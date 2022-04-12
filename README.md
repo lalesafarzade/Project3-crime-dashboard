@@ -98,5 +98,6 @@ WEBSITE DEMO
 <img valign="middle" src="https://img.shields.io/badge/See Below Sample Website Demo-blue.svg">
 <br>
 
-https://user-images.githubusercontent.com/94247881/162534515-38fdd7ea-3d7a-4edc-9aad-0e7fdee5451a.mp4
+https://user-images.githubusercontent.com/65635726/163048785-44dfa792-836d-4784-bdaa-7d562a38e6b4.mp4
+
 
