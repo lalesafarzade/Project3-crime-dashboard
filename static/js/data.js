@@ -52,7 +52,7 @@ function map_building(){
           } else {
             document.querySelector('#info1 #flag')
               .className = 'flag';
-            document.querySelector('#info1 h2').innerHTML = 'Comparing countries';
+            document.querySelector('#info1 h2').innerHTML = 'Comparing NPUs';
   
           }
           document.querySelector('#info1 .subheader')
