@@ -28,9 +28,14 @@ Neighborhoods with least crime in Atlanta
 <br>
 Breakdown of different types of crimes by Neighborhood
 <br>    
+<<<<<<< HEAD
+
+## Dataset Used: 
+=======
     
 
 ## Datasets used:
+>>>>>>> bc2d1cc95a826eddfc1790e4d9817e04e74c3d9e
 https://www.atlantapd.org/i-want-to/crime-data-downloads
 <br>
 COBRA-2022 (Updated Daily)
@@ -41,26 +46,58 @@ COBRS-2020
 <br>
 COBRA 2009-2019 (10 Year Period)
 <br>
+<<<<<<< HEAD
+
+# Technologies
+<br>
+=======
+>>>>>>> bc2d1cc95a826eddfc1790e4d9817e04e74c3d9e
 
 
-## Breakdown of Tasks: 
+![Technologies Together](https://user-images.githubusercontent.com/94247881/162582340-5f85c5ed-274c-41cb-b5f1-166a999af908.png)
 
-
-
-### Schemata used in final database: 
-
-
-### Assignment of Tasks: 
-
-### Additional Notes
- 1. All CSV files are in CSV folder and BLS_CSVs Folder
- 2. ERD and SQL to create database and related tables are in SQL Folder
- 3. All Final Jupyter Notebooks are in the Final Notebooks Folder
- 4. All Images are in the Images Folder
 
 <br>
+<br>
+<br>
+
+
+![Virtual_environments](https://user-images.githubusercontent.com/94247881/162849044-d357c3b1-fde2-429c-aaaf-df5120206037.png)
+
+
+<br>
+
+<br>
+
+# Visualzations
+<br>
+
+![npu_dash](https://user-images.githubusercontent.com/94247881/163009303-2d1d1ac3-b722-4b5c-9340-17b5dab2141c.JPG)
+
+
+<br>
+<br>
+
+![Dawntown_bubble](https://user-images.githubusercontent.com/94247881/163008893-ca4d33c1-68ea-477a-a619-8f5c7513c54c.png)
+
+
+<br>
+<br>
+
+
+![Downtoen_pie](https://user-images.githubusercontent.com/94247881/163009171-3d86dff1-fe6f-48a4-8f7f-d66c7fc6eee2.png)
+
+<br>
+<br>
+
+
+![downtown_bar](https://user-images.githubusercontent.com/94247881/163008500-b088db2b-07a0-4631-ba66-9d03b3ca1861.png)
+
+
+<br>
+<br>
 WEBSITE DEMO
-<img valign="middle" src="https://img.shields.io/badge/See Below Sample Website Demo-brightgreen.svg">
+<img valign="middle" src="https://img.shields.io/badge/See Below Sample Website Demo-blue.svg">
 <br>
 
 https://user-images.githubusercontent.com/94247881/162534515-38fdd7ea-3d7a-4edc-9aad-0e7fdee5451a.mp4
