@@ -395,7 +395,7 @@ function map_building(sample){
         //let data_res=result[i]
         //crime_num.push(data_res.offense_id)}
     
-     
+    let categories=[...Array(14).keys()].map(i => i + 2009); 
 
     // Wrap point.select to get to the total selected points
     Highcharts.wrap(Highcharts.Point.prototype, 'select', function (proceed) {
@@ -406,11 +406,10 @@ function map_building(sample){
       if (points.length) {
         if (points.length === 1) {
           
-          document.querySelector('#info h2').innerHTML = points[0].name;
+          document.querySelector('#info1 h2').innerHTML = points[0].npu;
         } else {
-          document.querySelector('#info #flag')
-            .className = 'flag';
-          document.querySelector('#info h2').innerHTML = 'Comparing Neighborhood';
+          
+          document.querySelector('#info1 h2').innerHTML = 'Comparing Neighborhood';
 
         }
         document.querySelector('#info .subheader')
@@ -462,17 +461,17 @@ function map_building(sample){
         });
         points.forEach(function (p) {
           countryChart.addSeries({
-            name: p.name,
-            data: npus[p.npu].data,
+            name: p.npu,
+            data: npus[p.npu].occur_count,
             type: points.length > 1 ? 'line' : 'area'
           }, false);
         });
         countryChart.redraw();
 
       } else {
-        document.querySelector('#info #flag').className = '';
-        document.querySelector('#info h2').innerHTML = '';
-        document.querySelector('#info .subheader').innerHTML = '';
+        
+        document.querySelector('#info1 h2').innerHTML = '';
+        document.querySelector('#info1 .subheader').innerHTML = '';
         if (countryChart) {
           countryChart = countryChart.destroy();
         }
@@ -483,12 +482,10 @@ function map_building(sample){
         title: {
           text: 'Number of crime in 2021 in every NPU'
         },
-        //colors: ['rgba(64,19,117,0.05)', 'rgba(64,19,117,0.2)', 'rgba(64,19,117,0.4)',
-                //'rgba(64,19,117,0.5)', 'rgba(64,19,117,0.6)', 'rgba(64,19,117,0.8)', 'rgba(64,19,117,1)'],
+       // colors: ['rgba(64,19,117,0.05)', 'rgba(64,19,117,0.2)', 'rgba(64,19,117,0.4)',
+              //  'rgba(64,19,117,0.5)', 'rgba(64,19,117,0.6)', 'rgba(64,19,117,0.8)', 'rgba(64,19,117,1)'],
 
-        subtitle: {
-          text: 'Source: <a href="http://data.worldbank.org/indicator/SP.POP.TOTL/countries/1W?display=default">The World Bank</a>'
-        },
+       
     
         //mapView: {
           //projection: {
@@ -504,27 +501,27 @@ function map_building(sample){
         }
       },
       
-      colorAxis: {
-        type: 'logarithmic',
-        endOnTick: false,
-        startOnTick: false,
-        min: 50000
-      },
+     // colorAxis: {
+       // type: 'logarithmic',
+       // endOnTick: false,
+       // startOnTick: false,
+       // min: 10
+     // },
         
       
-        legend: {
-          align: 'left',
-          layout: 'vertical',
-          floating: true
-        },
+       // legend: {
+        //  align: 'left',
+        //  layout: 'vertical',
+        //  floating: true
+       // },
       
        
       
         tooltip: {
           formatter: function () {
             return '<br>NPU: ' +this.point.npu + (
-              this.point.offense_id ?
-              '<br> Year: ' + this.point.occur_year+'<br>Number of crime: ' + this.point.offense_id  : ''
+              this.point.occur_count ?
+              '<br> Year: ' + this.point.occur_year+'<br>Number of crime: ' + this.point.occur_count  : ''
             );
           }
         },
@@ -541,7 +538,7 @@ function map_building(sample){
               joinBy:'npu',
               states: {
                 hover: {
-                    color: '#3FC1C0'
+                    color: '#0F80AA'
                 }
             },
               "mapData": [
@@ -681,7 +678,7 @@ function map_building(sample){
               cursor: 'pointer',
               states: {
               select: {
-              color: '#0899BA',
+              color: '#1D4E89',
               borderColor: 'black',
               dashStyle: 'shortdot'
 
