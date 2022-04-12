@@ -32,9 +32,6 @@ def home():
 def mapping():
      return render_template("choropleth.html")
 
-@app.route("/leaflet", methods=["GET"])
-def leaflet():
-     return render_template("map.html")
 
 @app.route("/dashboard", methods=["GET"])
 def dash():
