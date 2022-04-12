@@ -67,11 +67,21 @@ COBRA 2009-2019 (10 Year Period)
 
 <br>
 
-#Coding Snips
+# Coding Snips
 <br>
 <br>
 ![image](https://user-images.githubusercontent.com/94247881/163065438-eaa71765-bcaa-4170-b9d3-a9945babe3d1.png)
 
+
+<br>
+<br>
+
+![image (1)](https://user-images.githubusercontent.com/94247881/163065521-af06fe98-0025-4e22-81ea-f2acf7ac2f0d.png)
+
+<br>
+<br>
+
+![image (2)](https://user-images.githubusercontent.com/94247881/163065550-9d3742bb-7abb-46bd-9318-a2653a58bc8c.png)
 
 <br>
 <br>
