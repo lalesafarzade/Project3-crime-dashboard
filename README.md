@@ -67,6 +67,31 @@ COBRA 2009-2019 (10 Year Period)
 
 <br>
 
+# Coding Snips
+
+<br>
+<br>
+
+
+![image](https://user-images.githubusercontent.com/94247881/163065438-eaa71765-bcaa-4170-b9d3-a9945babe3d1.png)
+
+
+<br>
+<br>
+
+![image (1)](https://user-images.githubusercontent.com/94247881/163065521-af06fe98-0025-4e22-81ea-f2acf7ac2f0d.png)
+
+<br>
+<br>
+<br>
+
+
+![image (2)](https://user-images.githubusercontent.com/94247881/163065550-9d3742bb-7abb-46bd-9318-a2653a58bc8c.png)
+
+<br>
+<br>
+<br>
+
 # Visualzations
 <br>
 
@@ -95,7 +120,7 @@ COBRA 2009-2019 (10 Year Period)
 <br>
 <br>
 WEBSITE DEMO
-<img valign="middle" src="https://img.shields.io/badge/See Below Sample Website Demo-blue.svg">
+<img valign="middle" src="https://img.shields.io/badge/See Below for Sample Website Demo-blue.svg">
 <br>
 
 https://user-images.githubusercontent.com/65635726/163048785-44dfa792-836d-4784-bdaa-7d562a38e6b4.mp4
