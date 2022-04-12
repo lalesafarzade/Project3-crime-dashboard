@@ -12,13 +12,35 @@
 ### Crime in Atlanta, GA over 13 years
 An In Depth Analysis of crime in Atlanta, GA from 2009 - 2020
 
-## Project Desc/Outline 
+### Slide Deck & Website
+<br>
+https://docs.google.com/presentation/d/1oFQ6-zfGDYauz9j9h9SasLrphnQLJ4a1MjnWOEruQt8/edit#slide=id.p3
+
+<br>
 
 
 ## Research Questions this Database can Answer 
+Yearly crime trends
+<br>
+Neighborhoods with greatest crime in Atlanta
+<br>
+Neighborhoods with least crime in Atlanta
+<br>
+Breakdown of different types of crimes by Neighborhood
+<br>    
     
 
-## Datasets to be Used: 
+## Datasets used:
+https://www.atlantapd.org/i-want-to/crime-data-downloads
+<br>
+COBRA-2022 (Updated Daily)
+<br>
+COBRA-2021
+<br>
+COBRS-2020
+<br>
+COBRA 2009-2019 (10 Year Period)
+<br>
 
 
 ## Breakdown of Tasks: 
