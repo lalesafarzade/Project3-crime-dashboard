@@ -1,14 +1,17 @@
 from flask import Flask, render_template, redirect,jsonify
 from flask_pymongo import PyMongo
 import pymongo
-from config import myconnection
+from config import password
 
 app = Flask(__name__)
 
 #local
-conn = 'mongodb://localhost:27017'
-client = pymongo.MongoClient(conn)
-db = client.crime_db_3
+#my ip 75.191.139.98/32
+#conn = 'mongodb://localhost:27017'
+client = pymongo.MongoClient("mongodb+srv://user:<password>@cluster1.prz4w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+
+#client = pymongo.MongoClient(conn)
+db = client.crime_db_4
 
 #cloud
 #conn=myconnection
