@@ -28,11 +28,6 @@ Neighborhoods with least crime in Atlanta
 <br>
 Breakdown of different types of crimes by Neighborhood
 <br>    
-<<<<<<< HEAD
-
-## Dataset Used: 
-=======
-    
 
 ## Datasets used:
 >>>>>>> bc2d1cc95a826eddfc1790e4d9817e04e74c3d9e
@@ -46,12 +41,10 @@ COBRS-2020
 <br>
 COBRA 2009-2019 (10 Year Period)
 <br>
-<<<<<<< HEAD
+
 
 # Technologies
 <br>
-=======
->>>>>>> bc2d1cc95a826eddfc1790e4d9817e04e74c3d9e
 
 
 ![Technologies Together](https://user-images.githubusercontent.com/94247881/162582340-5f85c5ed-274c-41cb-b5f1-166a999af908.png)
@@ -63,6 +56,11 @@ COBRA 2009-2019 (10 Year Period)
 
 
 ![Virtual_environments](https://user-images.githubusercontent.com/94247881/162849044-d357c3b1-fde2-429c-aaaf-df5120206037.png)
+
+
+<br>
+
+<br>
 
 
 <br>
