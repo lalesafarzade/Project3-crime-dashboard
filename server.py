@@ -1,5 +1,4 @@
 from flask import Flask, render_template, redirect,jsonify
-from config import password
 import requests
 import json
 
