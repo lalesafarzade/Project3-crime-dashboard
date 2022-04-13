@@ -2,16 +2,27 @@ from flask import Flask, render_template, redirect,jsonify
 from flask_pymongo import PyMongo
 import pymongo
 from config import password
+#from dotenv import load_dotenv
 
 app = Flask(__name__)
+conn = 'mongodb://localhost:27017'
+client = pymongo.MongoClient(conn)
+db = client.crime_db_3
 
+#load_dotenv() # use dotenv to hide sensitive credential as environment variables
+#DATABASE_URL=f'mongodb+srv://user:{os.environ.get("password")}'\
+             # '@cluster0.n5itv.mongodb.net/myFirstDatabase?'\
+             # 'retryWrites=true&w=majority' # get connection url from environment
+
+#client=pymongo.MongoClient(DATABASE_URL) # establish connection with database
+#mongo_db=client.db # assign database to mongo_db
 #local
 #my ip 75.191.139.98/32
 #conn = 'mongodb://localhost:27017'
-client = pymongo.MongoClient("mongodb+srv://user:<password>@cluster1.prz4w.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+#client = pymongo.MongoClient("mongodb+srv://user:<password>@cluster0.n5itv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 #client = pymongo.MongoClient(conn)
-db = client.crime_db_4
+#db = client.crime_db_4
 
 #cloud
 #conn=myconnection
