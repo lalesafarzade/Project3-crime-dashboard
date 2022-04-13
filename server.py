@@ -2,39 +2,23 @@ from flask import Flask, render_template, redirect,jsonify
 from flask_pymongo import PyMongo
 import pymongo
 from config import password
-#from dotenv import load_dotenv
+import requests
+import json
 
 app = Flask(__name__)
-conn = 'mongodb://localhost:27017'
-client = pymongo.MongoClient(conn)
-db = client.crime_db_3
+url = "https://data.mongodb-api.com/app/data-yvusg/endpoint/data/beta/action/find"
 
-#load_dotenv() # use dotenv to hide sensitive credential as environment variables
-#DATABASE_URL=f'mongodb+srv://user:{os.environ.get("password")}'\
-             # '@cluster0.n5itv.mongodb.net/myFirstDatabase?'\
-             # 'retryWrites=true&w=majority' # get connection url from environment
+def api_listing(collection="npu",url=url,api_key='bvPF5IDCISoLArd9AGQSJW0Rc134wES2TfpFI7FR8SJK6oDWdfN8f4lUHRAVQWqU'):
+    payload = json.dumps({"collection":collection ,"database": "crime_db_4","dataSource": "Cluster0",})
+    headers = {'Content-Type': 'application/json','Access-Control-Request-Headers': '*','api-key': api_key}
+    response = requests.request("POST", url, headers=headers, data=payload)
+    return (response.json()["documents"])
 
-#client=pymongo.MongoClient(DATABASE_URL) # establish connection with database
-#mongo_db=client.db # assign database to mongo_db
-#local
-#my ip 75.191.139.98/32
-#conn = 'mongodb://localhost:27017'
-#client = pymongo.MongoClient("mongodb+srv://user:<password>@cluster0.n5itv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-
-#client = pymongo.MongoClient(conn)
-#db = client.crime_db_4
-
-#cloud
-#conn=myconnection
-#client = pymongo.MongoClient(conn)
-#db = client.crime_db_4
-
-
-npu_listings = list(db.npu.find())
-cat_listings=list(db.cat.find())
-data_listings=list(db.crime_info.find())
-cat_neighborhood_listings=list(db.cat_neighborhood.find())
-year_neighborhood_listings=list(db.year_neighborhood.find())
+npu_listings = api_listing(collection="npu")
+cat_listings=api_listing(collection="cat")
+data_listings=api_listing(collection="crime_info")
+cat_neighborhood_listings=api_listing(collection="cat_neighborhood")
+year_neighborhood_listings=api_listing(collection="year_neighborhood")
 
 #for listing in listings:
     
