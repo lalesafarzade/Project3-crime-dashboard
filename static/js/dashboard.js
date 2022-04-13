@@ -1,3 +1,9 @@
+console.log(window.location.pathname)
+var data=d3.json("/MapAPI").then(function(data) {
+  console.log(data);
+});
+
+
 function initialize()
 {
     var select=d3.select("#selDataset");

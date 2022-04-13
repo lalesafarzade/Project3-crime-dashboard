@@ -8,7 +8,7 @@
 function initialize()
 {
     var select=d3.select("#selDataset");
-    d3.json("/cat_neighborhood").then(function(data) {
+    d3.json("/year_neighborhood").then(function(data) {
         dataset=data.res
         let neighborhood_option=[]
         for (let i = 0; i < dataset.length; i++){

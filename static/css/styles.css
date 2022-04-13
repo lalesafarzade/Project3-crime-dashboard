@@ -22,7 +22,36 @@
   background-color: rgb(255, 255, 255);
   
 }
+.box-comp:hover{
+  background-color: #288da3;
+  font-style: italic;
+}
+.t-Data2:hover{
+  background-color: #f8f9f9;
+  
+}
 
+.t-Data2{
+  font-family: "Ubuntu"; 
+  color:#288da3 ;
+  font-size: 1.5 rem;
+  font-weight: bold;
+  margin-top: 3rem;
+}
+
+.panel:hover{
+  border-color: #FDCEB9;
+  border-style: solid;
+}
+
+.box-comp {
+  border-radius: 1rem;
+
+  margin-bottom: 2rem; 
+  padding: 10px 20px ; 
+  color:black;
+  background-color: #e7ebee00;
+}
 .panel-primary .panel-body{
   box-shadow: 0 8px 16px -6px rgb(8, 8, 8);
   padding: 10px;
@@ -99,5 +128,25 @@
     margin: 0.5em 0;
     padding: 0;
     border: none;
-  }
+  };
+
+  .col-lg-4{
+    margin-top: 1.2rem;
+
+  };
+}
+
+#footer{
+  margin-top: 2.5rem 1rem;
+  text-align: center;
+  color: #288da3;
+}
+.social-icon {
+  color: #288da3;
+  border-color: black;
+  margin:0 .5rem; 
+}
+
+.social-icon:hover,#footer:hover,#nav-brand:hover,#nav-text:hover,.t-Data:hover {
+  color: #FDCEB9;
 }

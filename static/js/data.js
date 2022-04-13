@@ -129,7 +129,7 @@ function map_building(){
         },
   
         subtitle: {
-          text: 'Source: <a href="https://www.atlantapd.org/i-want-to/crime-data-downloads">The World Bank</a>'
+          text: 'Source: <a href="https://www.atlantapd.org/i-want-to/crime-data-downloads">Atlanta Police Department</a>'
         },
   
         mapNavigation: {
@@ -141,11 +141,13 @@ function map_building(){
   
         colorAxis: {
           type: 'logarithmic',
+          color:'#288da3',
           endOnTick: false,
         startOnTick: false,
         min: 1
           
         },
+        color: '#288da3',
   
         tooltip: {
           formatter: function () {
