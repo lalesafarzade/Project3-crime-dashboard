@@ -1,11 +1,15 @@
 from flask import Flask, render_template, redirect,jsonify
+import os
 #from flask_pymongo import PyMongo
 import pymongo
+from flask_cors import CORS
 
 app = Flask(__name__)
+app.config['MONGO_CONNECT'] = False
+CORS(app)
 #local
-conn = 'mongodb://localhost:27017'
-client = pymongo.MongoClient(conn)
+
+client = pymongo.MongoClient(os.getenv("MONGO_URI", "mongodb://localhost:27017/"))
 db = client.crime_db_3
 #cloud
 #conn=myconnection
