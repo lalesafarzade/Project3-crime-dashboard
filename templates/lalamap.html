@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="../static/css/map.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- Bootstrap Scripts & collor scrolling -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-info p-4">
+              <a href="index.html"><p class="text-white">home</p></a>
+              <a href="dashboard.html"><p class="text-white">NPU Dashbord</p></a>
+              <a href="cat_dashboard.html"><p class="text-white">City Dashbord</p></a>
+              <a href="choropleth.html"><p class="text-white">Neighborhood Dashbord</p></a>
+              <a href="lalamap.html"><p class="text-white">map</p></a>
+
+            </div>
+        </div>
+        <nav class="navbar navbar-light bg-info" id="navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+    
+    
+    
+    <div id="wrapper">
+        <div id="atlanta"></div>
+        <div id="info1">
+          <span class="f32"><span id="flag"></span></span>
+          <h2></h2>
+          <div class="subheader">Click npus to view history</div>
+          <div id="country-chart"></div>
+        </div>
+      </div>
+    
+   
+    </div>
+
+    
+    
+    
+    
+
+</div>
+
+
+   
+
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="../static/js/data.js"></script>
+        <!--<script src="../static/js/data.js"></script>-->
+        <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/dashboard.js') }}"></script> -->
+        <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+
+
+        <!--</section>
+      <footer class="footer-section" id="footer">
+        <div class="container">  
+          <br>
+          <br>
+          <a href="https://www.linkedin.com/in/lalehsafarzadeh/"><i class="social-icon fab fa-linkedin"></i></a>
+          <i class="social-icon fas fa-address-card"></i>
+          <a href = "mailto: lalesafarzade@gmail.com"><i class="social-icon fas fa-envelope"></i></a>
+          <a href="https://github.com/lalesafarzade"><i class="social-icon fab fa-github"></i></a><br>
+          <p id="footer">© Copyright  2022.</p>
+          
+        </div>
+      </footer>-->
+
+
+</body>
+
+</html>

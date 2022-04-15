@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="icon" href="favicon.ico">
+    
     <link rel="stylesheet" href="/static/css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -24,47 +24,55 @@
 
 </head>
 <body>
-    <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-            <p class="text-white">Year Dashbord</p>
-            <p class="text-white">category Dashbord</p>
-            <p class="text-white">Year map</p>
-            <p class="text-white">category map</p>
-            
-          </div>
+  <div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-info p-4">
+          <a href="index.html"><p class="text-white">home</p></a>
+          <a href="dashboard.html"><p class="text-white">NPU Dashbord</p></a>
+          <a href="cat_dashboard.html"><p class="text-white">City Dashbord</p></a>
+          <a href="choropleth.html"><p class="text-white">Neighborhood Dashbord</p></a>
+          <a href="lalamap.html"><p class="text-white">map</p></a>
+
         </div>
-        <nav class="navbar navbar-dark bg-dark">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    </div>
+    <nav class="navbar navbar-light bg-info" id="navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+            aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-        </nav>
-      </div>
+        </button>
+    </nav>
+</div>
       <section id="main-body">
         <div class="container">
           <div class="row">
             
         
             <div class="col-lg-12 col-md-12">
+              <br><br><h3 class="t-Data2" style="text-align: center;">Click any map or dashboard to get an in-depth analysis!</h3><br>
               <div class="box-comp">
               <!--<div class="panel" id="panel-col2"> -->
+                <br>
+                <br>
                 
-                <p class="p-comp" style="text-align: left;">Click any map or dashboard to get an in-depth analysis!</p><br>
-                <div class="row" style="padding: 30px 0;">
+
+                
+                <hr>
+                <div class="row" style="padding: 60px 0;">
                   <div class="col-lg-6 col-md-12">
-                    <div class="panel" id="panel-figs1"><a href=""><img src="/static/images/rubbery.png" alt="main" class="viz2  img-thumbnail"><figcaption class="figure-caption" id="f_cap">Year Dashbord</figcaption></a></div>
+                    <div class="panel" id="panel-figs1"><a href="choropleth.html"><img src="/static/images/Nieborhood.JPG" alt="main" class="viz2  img-thumbnail"><figcaption class="figure-caption" id="f_cap">Nieborhood Dashbord</figcaption></a></div>
                        
                   </div>
                   <div class="col-lg-6 col-md-12">
-                    <div class="panel" id="panel-figs2"><a href="templates/choropleth.html"><img src="/static/images/rubbery.png" alt="main" class="viz2  img-thumbnail"><figcaption class="figure-caption" id="f_cap">Year map</figcaption></a></div>
+                    <div class="panel" id="panel-figs2"><a href="cat_dashboard.html"><img src="/static/images/cat_dash.JPG" alt="main" class="viz2  img-thumbnail"><figcaption class="figure-caption" id="f_cap">Overall Crime Summary</figcaption></a></div>
                   </div>
                 </div>
-                <div class="row" style="padding: 30px 0;">
+                <div class="row" style="padding: 60px 0;">
                   <div class="col-lg-6 col-md-12">
-                    <div class="panel" id="panel-figs3"><a href=""><img src="/static/images/rubbery.png" alt="main" class="viz2  img-thumbnail"><figcaption class="figure-caption" id="f_cap">category Dashbord</figcaption></a></div>
+                    <div class="panel" id="panel-figs3"><a href="dashboard.html"><img src="/static/images/npu_dash.JPG" alt="main" class="viz2  img-thumbnail"><figcaption class="figure-caption" id="f_cap">NPU Dashbord</figcaption></a></div>
                   </div>
                   <div class="col-lg-6 col-md-12">
-                    <div class="panel" id="panel-figs4"><a href=""><img src="/static/images/rubbery.png" alt="main" class="viz2  img-thumbnail"><figcaption class="figure-caption" id="f_cap">category map</figcaption></a></div>
+                    <div class="panel" id="panel-figs4"><a href="lalamap.html"><img src="/static/images/map1.jpg" alt="main" class="viz2 img-thumbnail"><figcaption class="figure-caption" id="f_cap">NPU map</figcaption></a></div>
                   </div>
     
                 </div>
@@ -79,16 +87,16 @@
         </div>
         </div>
     
-      <!--</section>
+      </section>
       <footer class="footer-section" id="footer">
         <div class="container">  
           <br>
           <br>
-          <a href="https://www.linkedin.com/in/lalehsafarzadeh/"><i class="social-icon fab fa-linkedin"></i></a>
+          <!--<a href="https://www.linkedin.com/in/lalehsafarzadeh/"><i class="social-icon fab fa-linkedin"></i></a>
           <i class="social-icon fas fa-address-card"></i>
-          <a href = "mailto: lalesafarzade@gmail.com"><i class="social-icon fas fa-envelope"></i></a>
-          <a href="https://github.com/lalesafarzade"><i class="social-icon fab fa-github"></i></a><br>
-          <p id="footer">© Copyright  2022.</p>
+          <a href = "mailto: lalesafarzade@gmail.com"><i class="social-icon fas fa-envelope"></i></a>-->
+          
+          <p id="footer">© Copyright  2022.<a href="https://github.com/lalesafarzade/Project3-crime-dashboard"><i class="social-icon fab fa-github"></i></a></p>
           
         </div>
       </footer>-->
