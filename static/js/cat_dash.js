@@ -1,4 +1,4 @@
-const url = "/static/data/year_cat.json";
+const url = "data/year_cat.json";
 
 var bluePalette = ["#1D4E89","#1C558E","#1A5B92","#16679A","#0F80AA","#0899BA","#04A6C2","#00B2CA","#20BAC5","#3FC1C0","#72efdd","#80ffdb"];
 

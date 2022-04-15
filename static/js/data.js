@@ -1,6 +1,6 @@
 
 function map_building(){
-  d3.json("/static/data/year_map.json").then(function(res){
+  d3.json("data/year_map.json").then(function(res){
 
     let data=res.filter(sample_res => sample_res.occur_year=="2022")
     let data2=data

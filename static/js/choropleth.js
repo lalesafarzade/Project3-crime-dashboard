@@ -8,7 +8,7 @@
 function initialize()
 {
     var select=d3.select("#selDataset");
-    d3.json("/static/data/neighborhood_year.json").then(function(data) {
+    d3.json("data/neighborhood_year.json").then(function(data) {
         dataset=data
         let neighborhood_option=[]
         for (let i = 0; i < dataset.length; i++){
@@ -53,7 +53,7 @@ function optionChanged(item){
 
 
 function Gauge_building(sample){
-  d3.json("/static/data/neighborhood_year.json").then(function(data) {
+  d3.json("data/neighborhood_year.json").then(function(data) {
        
     let result=data.filter(sample_res => sample_res.neighborhood==sample)
     console.log(data)
@@ -113,7 +113,7 @@ function Gauge_building(sample){
 
 
 function bar_building(sample){
-    d3.json("/static/data/neighborhood_cat.json").then(function(data) {
+    d3.json("data/neighborhood_cat.json").then(function(data) {
         console.log(data)
         //let res=mdata.filter(function(sample_res){sample_res.id==sample});
         let result=data.filter(sample_res => sample_res.neighborhood==sample)
@@ -200,7 +200,7 @@ function bar_building(sample){
 }
 //Bubble chart function
 function bubble_building(sample){
-    d3.json("/static/data/neighborhood_cat.json").then(function(data) {
+    d3.json("data/neighborhood_cat.json").then(function(data) {
         
         let result=data.filter(sample_res => sample_res.neighborhood==sample)
         function func(catg,year){
@@ -256,7 +256,7 @@ function bubble_building(sample){
 }
 
 function pie_building(sample){
-  d3.json("/static/data/neighborhood_cat.json").then(function(data) {
+  d3.json("data/neighborhood_cat.json").then(function(data) {
      
       let result=data.filter(sample_res => sample_res.neighborhood==sample)
       function func1(catg){
@@ -325,7 +325,7 @@ function pie_building(sample){
 
 
 function line_building(sample){
-    d3.json("/static/data/neighborhood_year.json").then(function(data) {
+    d3.json("data/neighborhood_year.json").then(function(data) {
        
         let result=data.filter(sample_res => sample_res.neighborhood==sample)
         console.log(result)
