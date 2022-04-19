@@ -8,6 +8,7 @@
   margin: 5rem auto;
   padding: 0;
   overflow: visible;
+  background-color: aquamarine;
 }
 
 #atlanta {
@@ -17,31 +18,32 @@
   margin-top: 5rem;
 }
 
-#info {
+#info1 {
   float: left;
-  width: 270px;
+  width: 670px;
   padding-left: 20px;
-  margin: 100px 0 0;
+  margin: 200px 0 0;
   border-left: 1px solid silver;
+ 
 }
 
-#info h2 {
+#info1 h2 {
   display: inline;
   font-size: 20pt;
 }
 
-#info .f32 .flag {
+#info1 .f32 .flag {
   vertical-align: bottom !important;
 }
 
-#info h4 {
+#info1 h4 {
   margin: 1em 0 0;
 }
 
 @media screen and (max-width: 920px) {
   #wrapper,
   #container,
-  #info {
+  #info1 {
     float: none;
     width: 100%;
     height: auto;
